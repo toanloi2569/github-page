@@ -4,11 +4,12 @@ date: 2024-07-01T10:00:00+07:00
 description: "Spin up a personal blog with Hugo, add code highlighting, and ship it to GitHub Pages."
 tags: ["hugo", "static-site", "github-pages"]
 categories: ["guide"]
-cover: "images/social-card.svg"
+featuredImage: "/images/social-card.svg"
+featuredImagePreview: "/images/social-card.svg"
 draft: false
 ---
 
-`Hugo` is a static site generator written in Go with blazing fast builds and a clean structure. With just a handful of Markdown files you can launch a complete website.
+`Hugo` is a static site generator written in Go with blazing fast builds and a clean structure. With just a handful of Markdown files you can launch a complete website. Pair it with the LoveIt theme and you get a polished UI, syntax highlighting, and dark mode without extra work.
 
 {{< alert type="success" >}}
 You're looking at a starter that already includes a friendly layout, dark mode, and shortcodes for lively embeds.

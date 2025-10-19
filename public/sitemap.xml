@@ -1,32 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>//localhost:1313/categories/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/getting-started-with-hugo/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/github-pages/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/categories/guide/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/hugo/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/static-site/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2024-07-01T10:00:00+07:00</lastmod>
-  </url>
-</urlset>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    ><url>
+            <loc>http://localhost:1313/posts/build-time-vs-runtime-environment-b%C3%A0i-h%E1%BB%8Dc-khi-m%C3%B4i-tr%C6%B0%E1%BB%9Dng-staging-g%E1%BB%8Di-websocket-t%E1%BB%9Bi-localhost/</loc><lastmod>2025-10-19T19:32:52&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2025-10-19T19:32:52&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-10-19T19:32:52&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/</loc><lastmod>2024-07-01T10:00:00&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/getting-started-with-hugo/</loc><lastmod>2024-07-01T10:00:00&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/github-pages/</loc><lastmod>2024-07-01T10:00:00&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/guide/</loc><lastmod>2024-07-01T10:00:00&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/hugo/</loc><lastmod>2024-07-01T10:00:00&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/static-site/</loc><lastmod>2024-07-01T10:00:00&#43;07:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/</loc><lastmod>2024-07-01T10:00:00&#43;07:00</lastmod></url></urlset>
