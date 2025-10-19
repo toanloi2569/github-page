@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="{{ if .Site.Params.enableDarkMode }}has-dark-mode{{ end }}">
+    <div class="container">
+      {{ partial "header.html" . }}
+      <main>{{ block "main" . }}{{ end }}</main>
+      {{ partial "footer.html" . }}
+    </div>
+    <script src="{{ "js/theme-toggle.js" | relURL }}" defer></script>
+    {{ block "scripts" . }}{{ end }}
+  </body>
+</html>

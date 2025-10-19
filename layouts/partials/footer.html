@@ -1,0 +1,8 @@
+<footer class="footer">
+  <p>© {{ now.Format "2006" }} {{ .Site.Params.author }}. Powered by Hugo.</p>
+  <p>
+    {{ with .Site.Params.social.github }}<a href="{{ . }}" rel="me">GitHub</a>{{ end }}
+    {{ if and .Site.Params.social.github .Site.Params.social.linkedin }} · {{ end }}
+    {{ with .Site.Params.social.linkedin }}<a href="{{ . }}" rel="me">LinkedIn</a>{{ end }}
+  </p>
+</footer>

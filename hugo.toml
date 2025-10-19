@@ -1,0 +1,49 @@
+baseURL = "https://toanloi2569.github.io/"
+languageCode = "en"
+title = "My Knowledge Notes"
+enableRobotsTXT = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  posts = "/posts/:slug/"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  subtitle = "Sharing knowledge and personal experience"
+  description = "Personal blog built with Hugo, complete with code highlighting and flexible layouts."
+  author = "Your Name"
+  showReadingTime = true
+  dateFormat = "02 Jan 2006"
+  enableDarkMode = true
+
+[params.social]
+  github = "https://github.com/your-handle"
+  linkedin = "https://www.linkedin.com/in/your-handle"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNos = true
+    noClasses = false
+    style = "dracula"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.119.0"

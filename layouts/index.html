@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <section class="hero">
+    <h1>Hello, I'm {{ .Site.Params.author }}</h1>
+    <p>{{ .Site.Params.description }}</p>
+    <p>
+      You can find the latest posts below. Prefer RSS?
+      {{ with .OutputFormats.Get "RSS" }}
+        <a href="{{ .RelPermalink }}">Subscribe here</a>.
+      {{ end }}
+    </p>
+  </section>
+
+  <section aria-label="Latest posts">
+    <div class="post-list">
+      {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+        <article class="post-card">
+          <header>
+            <p class="post-meta">
+              <span>🗓 {{ .Date.Format .Site.Params.dateFormat }}</span>
+              {{ with .ReadingTime }}
+                <span class="reading-time">⏱ {{ . }} min read</span>
+              {{ end }}
+            </p>
+            <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          </header>
+          {{ with .Summary }}
+            <p class="post-excerpt">{{ . | plainify }}</p>
+          {{ end }}
+          {{ with .Params.tags }}
+            <div class="tag-list">
+              {{ range . }}
+                <a class="tag-chip" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+    <p style="margin-top:2rem;">
+      <a href="{{ "/posts/" | relURL }}">View all posts →</a>
+    </p>
+  </section>
+{{ end }}

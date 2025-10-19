@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <section>
+    <h1>{{ .Title }}</h1>
+    <div class="post-list">
+      {{ range .Pages }}
+        <article class="post-card">
+          <header>
+            <p class="post-meta">
+              <span>🗓 {{ .Date.Format .Site.Params.dateFormat }}</span>
+              {{ with .ReadingTime }}
+                <span class="reading-time">⏱ {{ . }} min read</span>
+              {{ end }}
+            </p>
+            <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          </header>
+          {{ with .Summary }}
+            <p class="post-excerpt">{{ . | plainify }}</p>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

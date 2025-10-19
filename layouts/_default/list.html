@@ -1,0 +1,52 @@
+{{ define "main" }}
+  <section class="hero">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="intro">{{ . }}</div>
+    {{ else }}
+      {{ with .Site.Params.description }}
+        <p>{{ . }}</p>
+      {{ end }}
+    {{ end }}
+  </section>
+
+  <section aria-label="Post listings">
+    <div class="post-list">
+      {{ range .Paginator.Pages }}
+        <article class="post-card">
+          <header>
+            <p class="post-meta">
+              <span>🗓 {{ .Date.Format .Site.Params.dateFormat }}</span>
+              {{ with .ReadingTime }}
+                <span class="reading-time">⏱ {{ . }} min read</span>
+              {{ end }}
+            </p>
+            <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          </header>
+          {{ with .Summary }}
+            <p class="post-excerpt">{{ . | plainify }}</p>
+          {{ end }}
+          {{ with .Params.tags }}
+            <div class="tag-list">
+              {{ range . }}
+                <a class="tag-chip" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+
+    {{ if gt .Paginator.TotalPages 1 }}
+      <nav class="pagination" aria-label="Pagination">
+        {{ if .Paginator.HasPrev }}
+          <a href="{{ .Paginator.Prev.URL }}">← Previous</a>
+        {{ end }}
+        <span>Page {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}</span>
+        {{ if .Paginator.HasNext }}
+          <a href="{{ .Paginator.Next.URL }}">Next →</a>
+        {{ end }}
+      </nav>
+    {{ end }}
+  </section>
+{{ end }}
